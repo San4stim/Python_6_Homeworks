@@ -1,7 +1,9 @@
-number_of_flat = int(input('Введите номер квартиры \n'))
-etazh = int(input('Введи количество этажей \n'))
-kol_vo_kvartir = int(input('Введи количество квартир на этаже \n'))
-kvartir_v_padike = etazh * kol_vo_kvartir
-nomer_padika = (number_of_flat // kvartir_v_padike) + 1
-etazh = (((number_of_flat - (nomer_padika - 1) * kvartir_v_padike) + 1) // kol_vo_kvartir)
-print('тебе нужен падик номер ', nomer_padika, 'и этаж номер ', etazh)
+num = int(input("Enter your number: "))
+while not (num % 2 and num > 0):
+    print("Try again ")
+    num = int(input("Enter your number: "))
+if num % 2 and num > 0:
+    for i in range(1, num + 1, 2):
+        print(i * "*")
+    for i in range(num - 2, 0, -2):
+        print(i * "*")
